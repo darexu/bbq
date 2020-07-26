@@ -10,6 +10,8 @@ gem 'devise'
 
 gem 'webpacker', '~> 5.x'
 
+gem 'twitter-bootstrap-rails'
+
 gem 'sassc'
 
 gem 'uglifier', '>= 1.3.0'
