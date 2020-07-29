@@ -7,6 +7,9 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
 gem 'devise'
+gem 'devise-i18n'
+
+gem 'russian'
 
 gem 'webpacker', '~> 5.x'
 
