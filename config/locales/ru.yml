@@ -32,6 +32,13 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
+    links:
+      sign_in: 'войти'
+      sign_up: 'зарегистрироваться'
+      forgot_your_password?: 'забыли пароль?'
+      didn't_receive_confirmation_instructions?: 'не получили инструкции для подтверджения?'
+      didn't_receive_unlock_instructions?: 'не получили инструкции для разблокирования?'
+      sign_in_with: 'зайти с помощью'
 
   # Перевод ошибок
   errors:
