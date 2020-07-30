@@ -1,23 +1,25 @@
-<div class="col-md-8 buffer-both">
-  <div class="card">
-    <div class="card-header">Восстановить пароль</div>
-    <div class="card-body">
-      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row">
+  <div class="col-md-8 bmt-4 mb-4">
+    <div class="card">
+      <div class="card-header">Восстановить пароль</div>
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="form-group row">
-          <%= f.label :email, class: "col-md-4 col-form-label text-md-right" %>
-          <div class="col-md-6">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          <div class="form-group row">
+            <%= f.label :email, class: "col-md-4 col-form-label text-md-right" %>
+            <div class="col-md-6">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            </div>
           </div>
-        </div>
 
+          <div class="actions col-md-6 offset-md-4">
+            <%= f.submit "Сбросить пароль", class: "btn btn-primary btn-sm" %>
+          </div>
+        <% end %>
         <div class="actions col-md-6 offset-md-4">
-          <%= f.submit "Сбросить пароль", class: "btn btn-primary btn-sm" %>
+          <%= render "devise/shared/links" %>
         </div>
-      <% end %>
-      <div class="actions col-md-6 offset-md-4">
-        <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
