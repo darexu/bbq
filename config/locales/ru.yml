@@ -62,6 +62,8 @@ ru:
   errors:
     messages:
       not_saved:
-        one: "В вашей форме %{count} ошибка"
+        one: 'В вашей форме %{count} ошибка'
         few: 'В вашей форме %{count} ошибки'
         many: 'В вашей форме %{count} ошибок'
+        wrong_date_format: 'введены неправильно'
+
