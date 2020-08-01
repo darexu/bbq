@@ -14,7 +14,7 @@
 
   <div class="form-group">
     <%= f.label :datetime %>
-    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+    <%= f.text_field :datetime, class: 'form-control datepicker-here' %>
   </div>
 
   <div class="form-group">
@@ -22,7 +22,7 @@
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
-  <% if @event.persisted? %>
+  <% unless @event.new_record? %>
     <div class="form-group">
       <%= link_to('Удалить событие', event_path(@event), method: "delete",
                     class: 'btn btn-danger btn-sm ', data: { confirm: t('app.messages.exactly_remove?') }) %>
@@ -30,7 +30,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    <%= f.submit 'Сохранить', class: 'btn btn-primary btn-sm' %>
     или <%= link_to 'вернуться', :back %>
   </div>
 <% end %>
