@@ -14,7 +14,8 @@
 
   <div class="form-group">
     <%= f.label :datetime %>
-    <%= f.text_field :datetime, class: 'form-control datepicker-here' %>
+    <%= f.text_field :datetime, data: { timepicker: true }, class: 'form-control datepicker-here',
+                     autocomplete: 'off'%>
   </div>
 
   <div class="form-group">

@@ -19,3 +19,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import "../stylesheets/application";
+
+$('#minMaxExample').datepicker({
+  // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
+  minDate: new Date()
+})
