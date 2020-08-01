@@ -27,6 +27,14 @@ ru:
       destroyed: 'Вы удалили мероприятие :('
     users:
       updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
 
   # Перевод названия приложения и компании-разработчика
   app:
@@ -42,6 +50,13 @@ ru:
     messages:
       exactly_remove?: 'Точно удалить?'
 
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+
+    subscriptions:
+      subscription:
+        destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
   # Перевод ошибок
   errors:
@@ -49,4 +64,4 @@ ru:
       not_saved:
         one: "В вашей форме %{count} ошибка"
         few: 'В вашей форме %{count} ошибки'
-        many: 'В вашей форме %{count} ошибкок'
+        many: 'В вашей форме %{count} ошибок'
