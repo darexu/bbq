@@ -13,6 +13,10 @@ module ApplicationHelper
     nil
   end
 
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
   def user_avatar(user)
     # TODO: user raal avatars
     asset_path('user.png')
