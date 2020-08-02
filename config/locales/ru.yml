@@ -18,6 +18,10 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Коментарий'
+      subscription:
+        user: 'Пользователь'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
