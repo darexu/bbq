@@ -22,6 +22,8 @@ ru:
         body: 'Комментарий'
       subscription:
         user: 'Пользователь'
+        user_name: 'Имя'
+        user_email: 'Email'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
