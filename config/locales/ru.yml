@@ -19,7 +19,7 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
       comment:
-        body: 'Коментарий'
+        body: 'Комментарий'
       subscription:
         user: 'Пользователь'
 
