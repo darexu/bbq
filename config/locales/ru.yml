@@ -24,7 +24,12 @@ ru:
         user: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Email'
-
+    errors:
+      models:
+        event:
+          attributes:
+            datetime:
+              inclusion: должны быть в будущем
   # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:
@@ -71,4 +76,3 @@ ru:
         one: 'В вашей форме %{count} ошибка'
         few: 'В вашей форме %{count} ошибки'
         many: 'В вашей форме %{count} ошибок'
-
