@@ -7,6 +7,11 @@ class SubscriptionsController < ApplicationController
 
 
   def create
+    if @event.user_id == current_user.id
+      redirect_to @event, notice: I18n.t('controllers.subscriptions.is_author')
+      return
+    end
+
     # Болванка для новой подписки
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
