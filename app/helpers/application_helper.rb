@@ -21,4 +21,14 @@ module ApplicationHelper
     # TODO: user raal avatars
     asset_path('user.png')
   end
+
+  def is_author?(event)
+    return false unless current_user
+    event.user_id == current_user.id
+  end
+
+  def subscribed?
+    return false unless current_user
+    Subscription.exists?(user_id: current_user.id)
+  end
 end
