@@ -4,7 +4,7 @@ class Subscription < ActiveRecord::Base
 
   # проверки выполняются только если user не задан (незареганные приглашенные)
   validates :user_name, presence: true, unless: -> { user.present? }
-  validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
+  validates :user_email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
 
   # для данного event_id один юзер может подписаться только один раз (если юзер задан)
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
