@@ -29,7 +29,14 @@ ru:
         event:
           attributes:
             datetime:
-              inclusion: должны быть в будущем
+              inclusion: 'должны быть в будущем'
+        subscription:
+          attributes:
+            user_email:
+              email_taken: '%{value} уже занят'
+            user:
+              user_is_registered: 'собственник события'
+
   # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:

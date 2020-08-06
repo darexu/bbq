@@ -13,6 +13,7 @@ class Subscription < ApplicationRecord
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
   validate :is_author?, if: -> { user.present? }
+  validate :is_email_registered?, on: :create, unless: -> { user.present? }
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
   def user_name
@@ -35,7 +36,13 @@ class Subscription < ApplicationRecord
 
   def is_author?
     if event.user_id == user.id
-      errors.add(:user, I18n.t('errors.messages.is_author'))
+      errors.add(:user, :user_is_registered)
+    end
+  end
+
+  def is_email_registered?
+    if User.exists?(email: :user_email)
+      errors.add(:user_email, :email_taken)
     end
   end
 end
