@@ -12,6 +12,7 @@ class Subscription < ApplicationRecord
   # для данного event_id один email может использоваться только один раз (если нет юзера, анонимная подписка)
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
+  validate :is_author, if: -> { user.present? }
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
   def user_name
@@ -29,6 +30,12 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  def is_author
+    if event.user_id == user.id
+      errors.add(:user, I18n.t('errors.messages.is_author'))
     end
   end
 end
