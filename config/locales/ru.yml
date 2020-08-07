@@ -20,6 +20,7 @@ ru:
         description: 'Описание'
       comment:
         body: 'Комментарий'
+        user_name: 'Ваше имя'
       subscription:
         user: 'Пользователь'
         user_name: 'Имя'
