@@ -65,6 +65,9 @@ ru:
       didn't_receive_confirmation_instructions?: 'не получили инструкции для подтверджения?'
       didn't_receive_unlock_instructions?: 'не получили инструкции для разблокирования?'
       sign_in_with: 'зайти с помощью'
+    buttons:
+      delete_event: 'Удалить событие'
+      save: 'Сохранить'
     messages:
       exactly_remove?: 'Точно удалить?'
 

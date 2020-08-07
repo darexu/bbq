@@ -25,13 +25,13 @@
 
   <% unless @event.new_record? %>
     <div class="form-group">
-      <%= link_to('Удалить событие', event_path(@event), method: "delete",
+      <%= link_to(t('app.buttons.delete_event'), event_path(@event), method: "delete",
                     class: 'btn btn-danger btn-sm ', data: { confirm: t('app.messages.exactly_remove?') }) %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary btn-sm' %>
+    <%= f.submit t('app.buttons.save'), class: 'btn btn-primary btn-sm' %>
     или <%= link_to 'вернуться', :back %>
   </div>
 <% end %>
