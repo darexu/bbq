@@ -41,7 +41,7 @@ class Subscription < ApplicationRecord
   end
 
   def is_email_registered?
-    if User.exists?(email: :user_email)
+    if User.exists?(email: self.user_email)
       errors.add(:user_email, :email_taken)
     end
   end

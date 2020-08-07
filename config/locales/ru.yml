@@ -33,7 +33,7 @@ ru:
         subscription:
           attributes:
             user_email:
-              email_taken: '%{value} уже занят'
+              email_taken: '%{value} уже зарегистрирован'
             user:
               user_is_registered: 'уже зарегистрирован. Для подписки авторизуйтесь.'
 
@@ -86,3 +86,4 @@ ru:
         one: 'В вашей форме %{count} ошибка'
         few: 'В вашей форме %{count} ошибки'
         many: 'В вашей форме %{count} ошибок'
+      taken: 'уже подписан'
