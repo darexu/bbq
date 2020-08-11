@@ -69,6 +69,15 @@ ru:
     buttons:
       delete_event: 'Удалить событие'
       save: 'Сохранить'
+      back: "вернутся"
+      edit: "Изменить"
+      new_event: "Создать событие"
+      change_password: "Сменить пароль"
+      edit_profile: "Редактировать профиль"
+      subscribe: "Подписатся"
+      send: "Отправить"
+      delete_account: "Удалить аккаунт"
+      registration: "Регистрация"
     messages:
       exactly_remove?: 'Точно удалить?'
 
