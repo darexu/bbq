@@ -39,12 +39,12 @@
 
     <div class="col-md-4">
       <div class="event-owner">
-        <h4>Зовет:</h4>
+        <h4><%= t('app.text.vocative') %>:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
       <% if @event.subscriptions.except(@new_subscription).any? %>
         <div class="event-subscriptions">
-          <h4>Пойдут:</h4>
+          <h4><%= t('app.text.subscribers') %>:</h4>
           <div>
             <p>
               <%= render partial: 'subscriptions/subscription',
@@ -55,7 +55,7 @@
       <% end %>
       <% unless is_author?(@event) || subscribed? %>
         <div class="event-subscription-form">
-          <h4>Я пойду:</h4>
+          <h4><%= t('app.text.i_am_asubscriber') %>:</h4>
           <div>
             <%= render partial: 'subscriptions/form', locals: {
               subscription: @new_subscription || @event.subscriptions.build

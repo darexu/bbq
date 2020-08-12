@@ -66,6 +66,10 @@ ru:
       didn't_receive_confirmation_instructions?: 'не получили инструкции для подтверджения?'
       didn't_receive_unlock_instructions?: 'не получили инструкции для разблокирования?'
       sign_in_with: 'зайти с помощью'
+      registration: "Регистрация"
+      log_in: "Войти"
+      log_out: "Выйти"
+      profile: "Профиль"
     buttons:
       delete_event: 'Удалить событие'
       save: 'Сохранить'
@@ -78,8 +82,22 @@ ru:
       send: "Отправить"
       delete_account: "Удалить аккаунт"
       registration: "Регистрация"
+      sign_in: "Войти"
     messages:
       exactly_remove?: 'Точно удалить?'
+    text:
+      or: "или"
+      organized: "Организовал"
+      user_has_not_yet_organized_any_events: "Пользователь пока не организовал ни одного события"
+      sign_in: "Вход"
+      edit_event: "Редактировать событие"
+      events: "События"
+      new_event: "Новое событие"
+      vocative: "Зовущий"
+      subscribers: "Пойдут"
+      i_am_asubscriber: "Я пойду"
+      change_password: "Сменить пароль"
+      registration: "Регистрация"
 
   comments:
     comment:

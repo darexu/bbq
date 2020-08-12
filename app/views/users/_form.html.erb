@@ -12,7 +12,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to t('app.buttons.back'), :back %>
+    <%= f.submit t('app.buttons.save'), class: 'btn btn-primary' %>
+    <%= t('app.text.or') %>, <%= link_to t('app.buttons.back'), :back %>
   </div>
 <% end %>
