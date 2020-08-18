@@ -38,7 +38,7 @@
 
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form',
-                   locals: {comment: @new_comment || @event.comments.build} %>
+                   locals: { comment: @new_comment || @event.comments.build } %>
 
         <div class="buffer-both">
           <%= render partial: 'comments/comment',
