@@ -9,7 +9,7 @@ class Comment < ApplicationRecord
 
   def user_name
     if user.present?
-      user.internal_metadata_table_name
+      user.name
     else
       super
     end

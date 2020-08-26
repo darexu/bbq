@@ -6,5 +6,6 @@
 
 <div class="row buffer-bottom">
   <%# Рендерим сразу массив событий, каждый в паршиале 'events/event' %>
+  <%# если паршал называется event, то в паршал передается локальная переменная с названием этого паршлала%>
   <%= render partial: 'events/event', collection: @events %>
 </div>
