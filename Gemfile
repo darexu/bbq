@@ -22,6 +22,7 @@ gem 'bootsnap', require: false
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem "mailjet"
 
 group :production do
   gem 'pg'
