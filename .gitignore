@@ -42,3 +42,4 @@ yarn-debug.log*
 
 /.idea
 /public/uploads
+.env
