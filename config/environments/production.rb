@@ -99,7 +99,6 @@ Rails.application.configure do
   # Делать рассылку писем (если false — мэйлер только имитирует работу, реальных писем не уходит)
   config.action_mailer.perform_deliveries = true
 
-  # отправка почты по протоколу SMTP
-  config.action_mailer.delivery_method = :smtp
-
+  # отправка почты через Mailjet
+  config.action_mailer.delivery_method = :mailjet
 end
