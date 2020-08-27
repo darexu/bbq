@@ -32,5 +32,6 @@ module Bbq
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.i18n.default_locale = :ru
+    config.action_mailer.delivery_method = :mailjet # do not use in dev mode!
   end
 end
