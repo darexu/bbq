@@ -1,0 +1,10 @@
+<%= t '.title' %>
+----
+
+<%= t '.author' %>: <%= @author %>
+
+<%= link_to "Ссылка на событие", event_url(@event) %>
+
+--------------------------------
+<%= t '.event' %>: <%= @event.title %>
+<%= t '.owner' %>: <%= @event.user.name %>
