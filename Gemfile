@@ -23,6 +23,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 gem "mailjet"
+gem "dotenv-rails"
 
 group :production do
   gem 'pg'
