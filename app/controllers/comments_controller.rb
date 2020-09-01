@@ -2,7 +2,6 @@
 #
 # Контроллер вложенного ресурса комментариев
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
   # задаем "родительский" event для коммента
   before_action :set_event, only: [:create, :destroy]
 
@@ -37,6 +36,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def set_event
     @event = Event.find(params[:event_id])
   end

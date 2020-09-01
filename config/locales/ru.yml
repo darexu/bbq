@@ -23,6 +23,7 @@ ru:
       comment:
         body: 'Комментарий'
         user_name: 'Ваше имя'
+        user: 'Пользователь'
       subscription:
         user: 'Пользователь'
         user_name: 'Имя'
