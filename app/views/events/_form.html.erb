@@ -23,6 +23,11 @@
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode, class: 'form-control' %>
+  </div>
+
   <% unless @event.new_record? %>
     <div class="form-group">
       <%= link_to(t('app.buttons.delete_event'), event_path(@event), method: "delete",
