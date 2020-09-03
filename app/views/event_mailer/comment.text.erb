@@ -8,5 +8,5 @@
 --------------------------------
 <%= t '.event' %>: <%= @event.title %>
 <%= t '.link' %>: <%= event_url(@event) %>
-<%= l @event.datetime %>
+<%= l @event.datetime, format: :short %>
 <%= t '.owner' %>: <%= @event.user.name %>
