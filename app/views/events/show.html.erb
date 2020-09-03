@@ -42,7 +42,7 @@
 
         <div class="buffer-both">
           <%= render partial: 'comments/comment',
-                     collection: @event.comments.except(@new_comment) %>
+                     collection: @event.comments.sort_by_newest.except(@new_comment) %>
         </div>
       </div>
     </div>
