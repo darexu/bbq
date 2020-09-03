@@ -134,6 +134,7 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      link: 'Ссылка'
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
