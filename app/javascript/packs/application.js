@@ -6,6 +6,7 @@
 import 'bootstrap'
 import './datepicker.min'
 import './map'
+import './ekko-lightbox'
 
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
@@ -24,3 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     minDate: new Date()
   })
 })
+
+$( document ).ready(function() {
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+});
