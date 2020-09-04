@@ -8,8 +8,9 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_pack_tag "application", :media => "all" %>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=75ad070c-a52c-4586-ba50-ed1f912e0897&lang=ru_RU" type="text/javascript">
-    </script>
+
+    <%= yield :local_js %>
+
     <%= javascript_pack_tag 'application' %>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>

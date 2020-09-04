@@ -5,7 +5,6 @@
 
 import 'bootstrap'
 import './datepicker.min'
-import './map'
 import './ekko-lightbox'
 
 require("@rails/ujs").start()
