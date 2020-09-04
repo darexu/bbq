@@ -1,7 +1,17 @@
 <%# Паршал для вывода отдельной фотографии %>
 <div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: { toggle: 'lightbox' } %>
+  <% trash = if current_user_can_edit?(photo)
+               link_to(
+                 fa_icon('trash'), event_photo_path(photo.event, photo),
+                 method: :delete, data: { confirm: 'Точно удалить фото?' }
+               )
+             end %>
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
+              data: { toggle: 'lightbox', gallery: 'event-gallery',
+                      title: "Добавил #{render partial: 'users/user', object: photo.user} #{trash}"} %>
 
   <%# Показываем не только фотку, но и юзаре, который её добавил %>
   Добавил <%= render partial: 'users/user', object: photo.user %>
+
+  <%= trash %>
 </div>
