@@ -52,4 +52,13 @@ module ApplicationHelper
     return false unless current_user
     Subscription.exists?(user_id: current_user.id)
   end
+
+  def trash(photo)
+    if current_user_can_edit?(photo)
+      link_to(
+        fa_icon('trash'), event_photo_path(photo.event, photo),
+        method: :delete, data: { confirm: t('app.messages.exactly_remove?') }
+      )
+    end
+  end
 end

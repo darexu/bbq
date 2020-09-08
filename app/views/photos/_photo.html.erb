@@ -1,17 +1,11 @@
 <%# Паршал для вывода отдельной фотографии %>
 <div class="event-photo buffer-both">
-  <% trash = if current_user_can_edit?(photo)
-               link_to(
-                 fa_icon('trash'), event_photo_path(photo.event, photo),
-                 method: :delete, data: { confirm: t('app.messages.exactly_remove?') }
-               )
-             end %>
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url,
               data: { toggle: 'lightbox', gallery: 'event-gallery',
-                      title: "#{t('app.text.added')} #{render partial: 'users/user', object: photo.user} #{trash}"} %>
+                      title: "#{t('app.text.added')} #{render partial: 'users/user', object: photo.user} #{trash(photo)}"} %>
 
   <%# Показываем не только фотку, но и юзаре, который её добавил %>
   <%= t('app.text.added') %> <%= render partial: 'users/user', object: photo.user %>
 
-  <%= trash %>
+  <%= trash(photo) %>
 </div>
