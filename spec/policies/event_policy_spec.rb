@@ -19,7 +19,7 @@ RSpec.describe EventPolicy do
     end
   end
 
-  context 'when user in an owner' do
+  context 'when user is an owner' do
     let(:event) {Event.create(title: 'Шашлык', description: 'Шашлык у речки', user: user)}
 
     permissions :show?, :edit?, :update?, :destroy? do
@@ -27,7 +27,7 @@ RSpec.describe EventPolicy do
     end
   end
 
-  context 'when user in unauthorized' do
+  context 'when user is unauthorized' do
     let(:event) {Event.create(title: 'Шашлык', description: 'Шашлык у речки', user: user)}
 
     permissions :show? do
