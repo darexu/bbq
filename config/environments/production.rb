@@ -30,8 +30,8 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
-  config.action_controller.asset_host = 'shashlyk.herokuapp.com'
-  
+  config.action_controller.asset_host = ENV['ASSET_HOST']
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
@@ -92,7 +92,7 @@ Rails.application.configure do
 
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
-  config.action_mailer.default_url_options = {host: 'shashlyk.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: ENV['MAILER_URL_OPTIONS']}
 
   # Вываливать ли посетителю сайта ошибки при отправке писем
   config.action_mailer.raise_delivery_errors = false
