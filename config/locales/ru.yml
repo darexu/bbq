@@ -94,6 +94,7 @@ ru:
       delete_account: "Удалить аккаунт"
       registration: "Регистрация"
       sign_in: "Войти"
+      resend_confirmation: "Отправить ссылку"
     messages:
       exactly_remove?: 'Точно удалить?'
     text:
@@ -110,6 +111,7 @@ ru:
       change_password: "Сменить пароль"
       registration: "Регистрация"
       added: 'Добавил'
+      resend_confirmation: "Отправить ссылку для подтверждения повторно"
 
   comments:
     comment:
