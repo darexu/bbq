@@ -40,5 +40,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'ed25519', '>= 1.2', '< 2.0'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+  gem "capistrano", "~> 3.14", require: false
+  gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano-bundler', '~> 2.0'
+  gem 'capistrano-rbenv', '~> 2.2'
+  gem 'capistrano-passenger'
   gem 'listen'
 end
