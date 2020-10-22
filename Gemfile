@@ -10,6 +10,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'pundit'
 
+gem 'resque'
+
 gem 'rails-i18n'
 
 gem 'webpacker', '~> 5.x'
@@ -47,5 +49,7 @@ group :development do
   gem 'capistrano-bundler', '~> 2.0'
   gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano-passenger'
+  gem "capistrano-resque", "~> 0.2.2", require: false
   gem 'listen'
+  gem 'letter_opener'
 end

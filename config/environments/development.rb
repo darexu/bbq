@@ -64,17 +64,22 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Какой бэкендадаптер использовать для фоновых задач данного окружения
+  # И как называется очередь задач этого приложения
+  config.active_job.queue_adapter = :async
+  config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
+
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
-  # отправка почты по протоколу SMTP
-  config.action_mailer.delivery_method = :smtp
+  # отправка почты по через gem letter opener
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 
   # Настройки для работы через GMail аккаунт
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: '587',
-    user_name: ENV['MAILJET_SENDER'], # не используйте для тестов свои реальные ящики
     user_name: ENV['USER_SENDER'], # не используйте для тестов свои реальные ящики
     password: ENV['MAIL_PASSWORD'], # не храните здесь пароль!
     authentication: 'plain',

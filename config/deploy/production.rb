@@ -14,7 +14,12 @@
 # - web server (где живет nginx)
 # - database (где живет наш Postgres)
 # У нас все живет на одной машине.
-server 'shashlik.site', user: 'deploy', roles: %w[app db web]
+server 'shashlik.site', user: 'deploy', roles: %w[app db web resque-worker]
+
+# При запуске воркера загружать Rails приложение
+set :resque_environment_task, true
+# Будет запущен один воркер, обслуживающий очереди с именем "bbq*"
+set :workers, { "#{fetch(:application)}*" => 1 }
 
 
 # role-based syntax

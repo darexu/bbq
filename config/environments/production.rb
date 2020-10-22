@@ -49,7 +49,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :warm
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -93,6 +93,9 @@ Rails.application.configure do
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
   config.action_mailer.default_url_options = {host: ENV['MAILER_URL_OPTIONS']}
+
+  config.active_job.queue_adapter = :resque
+  config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
 
   # Вываливать ли посетителю сайта ошибки при отправке писем
   config.action_mailer.raise_delivery_errors = false
