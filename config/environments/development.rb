@@ -66,7 +66,7 @@ Rails.application.configure do
 
   # Какой бэкендадаптер использовать для фоновых задач данного окружения
   # И как называется очередь задач этого приложения
-  config.active_job.queue_adapter = :async
+  config.active_job.queue_adapter = :resque
   config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
 
   # Базовый урл сайта, для генерации правильных ссылок в письмах
