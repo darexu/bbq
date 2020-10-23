@@ -14,7 +14,7 @@
 # - web server (где живет nginx)
 # - database (где живет наш Postgres)
 # У нас все живет на одной машине.
-server 'shashlik.site', user: 'deploy', roles: %w[app db web resque-worker]
+server 'shashlik.site', user: 'deploy', roles: %w[app db web resque_worker]
 
 # При запуске воркера загружать Rails приложение
 set :resque_environment_task, true
