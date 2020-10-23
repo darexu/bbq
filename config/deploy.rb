@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:darexu/bbq.git'
 
 set :deploy_to, '/home/deploy/apps/bbq'
 
-append :linked_files, 'config/database.yml', 'config/credentials.yml.enc', '.env'
+append :linked_files, 'config/database.yml', 'config/credentials.yml.enc', '.env.production'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
 after 'deploy:restart', 'resque:restart'
