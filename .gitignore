@@ -44,5 +44,6 @@ yarn-debug.log*
 /public/uploads
 .env.production
 .env.development
+.env.test
 /config/credentials.yml.enc
 /config/database.yml

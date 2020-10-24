@@ -68,7 +68,8 @@ Rails.application.configure do
   # И как называется очередь задач этого приложения
   config.active_job.queue_adapter = :resque
   config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
-
+  # Разрешить доступ по lvh.me на localhost
+  config.hosts << 'lvh.me'
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 

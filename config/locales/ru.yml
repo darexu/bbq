@@ -71,6 +71,7 @@ ru:
     name: 'Шашлыки'
     company: 'Хороший программист'
     links:
+      sign_up_with: 'войти с помощью'
       sign_in: 'войти'
       sign_up: 'зарегистрироваться'
       forgot_your_password?: 'забыли пароль?'
@@ -157,4 +158,8 @@ ru:
     short: "%d %b, %H:%M"
   pundit:
     not_authorized: "Вам сюда низзя!"
+  devise:
+    omniauth_callbacks:
+      success: "Успешно авторизовались"
+      failure: "Не получилось авторизоваться"
 

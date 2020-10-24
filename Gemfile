@@ -25,11 +25,17 @@ gem 'bootsnap', require: false
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-gem "mailjet"
-gem "dotenv-rails"
+gem 'mailjet'
+gem 'dotenv-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'pg'
+end
+
+group :test do
+  gem 'factory_bot_rails'
 end
 
 group :development, :test do
