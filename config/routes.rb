@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  # Переопределен контроллер регистраций для функционала проверки капчи
+
   devise_for :users, controllers: {
-    registrations: 'registrations',
     omniauth_callbacks: 'users/omniauth_callbacks'
-  }
+  }, skip: [:sessions]
+
+  as :user do
+    get 'signin', to: 'devise/sessions#new', as: :new_user_session
+    post 'signin', to: 'devise/sessions#create', as: :user_session
+    delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
+  end
 
   root 'events#index'
 
