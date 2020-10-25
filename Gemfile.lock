@@ -212,6 +212,8 @@ GEM
     omniauth-oauth2 (1.7.0)
       oauth2 (~> 1.4)
       omniauth (~> 1.9)
+    omniauth-vkontakte (1.6.1)
+      omniauth-oauth2 (>= 1.5, <= 1.7.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
     public_suffix (4.0.5)
@@ -373,6 +375,7 @@ DEPENDENCIES
   mailjet
   omniauth
   omniauth-facebook
+  omniauth-vkontakte
   pg
   pundit
   rails (~> 6.0.3, >= 6.0.3.1)

@@ -29,6 +29,7 @@ gem 'mailjet'
 gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 group :production do
   gem 'pg'
