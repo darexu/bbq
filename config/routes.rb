@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: {
+  devise_for :users, controllers: do
     omniauth_callbacks: 'users/omniauth_callbacks'
-  }, skip: [:sessions]
+  end, skip: [:sessions]
 
   as :user do
     get 'signin', to: 'devise/sessions#new', as: :new_user_session
