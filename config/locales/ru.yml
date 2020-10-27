@@ -160,7 +160,7 @@ ru:
     not_authorized: "Вам сюда низзя!"
   devise:
     omniauth_callbacks:
-      success: "Данные успешно получены"
+      success: "Данные для авторизации успешно получены"
       failure: "Не получилось авторизоваться"
       need_email: 'Для авторизации необходимо разрешить передачу email'
     confirmations:
