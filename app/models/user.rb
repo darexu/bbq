@@ -32,33 +32,19 @@ class User < ApplicationRecord
     Subscription.where(user_id: nil, user_email: self.email).update_all(user_id: self.id)
   end
 
-  def self.find_for_facebook_oauth(access_token)
+  def self.find_for_oauth(access_token)
     email = access_token.info.email
     user = where(email: email).first
 
     return user if user.present?
 
+    name = access_token.info.name
     provider = access_token.provider
     id = access_token.extra.raw_info.id
-    url = "https://facebook.com/#{id}"
+    url = "https://#{provider}.com/#{id}"
 
     where(url: url, provider: provider).first_or_create! do |user|
-      user.email = email
-      user.password = Devise.friendly_token.first(16)
-    end
-  end
-
-  def self.find_for_vkontakte_oauth(access_token)
-    email = access_token.info.email
-    user = where(email: email).first
-
-    return user if user.present?
-
-    provider = access_token.provider
-    id = access_token.extra.raw_info.id
-    url = "https://facebook.com/#{id}"
-
-    where(url: url, provider: provider).first_or_create! do |user|
+      user.name = name
       user.email = email
       user.password = Devise.friendly_token.first(16)
     end
