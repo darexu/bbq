@@ -18,10 +18,6 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  def self.find_for_vkontakte_oauth(i)
-    # code here
-  end
-
   private
 
   def set_name
